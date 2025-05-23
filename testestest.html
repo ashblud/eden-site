@@ -1,10 +1,35 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>Test Page</title>
-</head>
-<body style="background:#222;color:#fff;font-family:sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;">
-  <h1>Это тестовая страница</h1>
-</body>
-</html>
+body {
+  margin:0;
+  font-family:sans-serif;
+  background:#111;
+  color:#eee;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:2rem;
+}
+.avatar {
+  width:120px;
+  border-radius:50%;
+  margin-bottom:1rem;
+}
+.link-list {
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  width:100%;
+  max-width:400px;
+}
+.link-btn {
+  text-decoration:none;
+  background:#222;
+  padding:1rem;
+  border-radius:8px;
+  text-align:center;
+  color:#fff;
+  font-size:1.1rem;
+  transition:background .2s;
+}
+.link-btn:hover {
+  background:#333;
+}
