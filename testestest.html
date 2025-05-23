@@ -1,122 +1,129 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Andy Roze</title>
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    rel="stylesheet"
-  >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gothic Rock Musician – Link in Bio</title>
   <style>
-    * { box-sizing:border-box; margin:0; padding:0; }
+    /* Базовые тёмные стили */
     body {
-      background: linear-gradient(135deg, #1a000f 0%, #000000 100%);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      font-family: sans-serif;
+      background: #111;
       color: #eee;
-      display:flex;
-      justify-content:center;
-      padding:2rem 1rem;
-      min-height:100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    .container {
-      width:100%;
-      max-width:360px;
-      text-align:center;
+    a, button {
+      text-decoration: none;
+      color: #fff;
+      background: #333;
+      border: 2px solid #444;
+      padding: 0.75em 1.5em;
+      margin: 0.5em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background .3s, border-color .3s;
     }
-    h1 {
-      font-size:1.8rem;
-      margin-bottom:1.5rem;
-      letter-spacing:1px;
+    a:hover, button:hover {
+      background: #222;
+      border-color: #666;
     }
-    .link-list {
-      display:flex;
-      flex-direction:column;
-      gap:1rem;
+    header img {
+      max-width: 200px;
+      margin: 2em 0 1em;
+      filter: drop-shadow(0 0 8px purple);
     }
-    .link-item {
-      display:flex;
-      align-items:center;
-      gap:0.8rem;
-      background:#111;
-      border-radius:8px;
-      padding:1rem;
-      text-decoration:none;
-      color:#fff;
-      font-size:1rem;
-      transition:background .2s, transform .1s;
-      box-shadow:0 2px 8px rgba(0,0,0,0.7);
+    section {
+      width: 100%;
+      max-width: 600px;
+      margin: 1.5em 0;
     }
-    .link-item:hover {
-      background:#222;
-      transform:translateY(-2px);
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.7);
     }
-    .link-item i {
-      font-size:1.2rem;
-      width:1.2rem;
-      text-align:center;
+    .social-links a {
+      display: inline-block;
+      width: 40px; height: 40px;
+      line-height: 40px;
+      font-size: 1.2em;
+      border-radius: 50%;
+      background: #222;
+      margin: 0.25em;
     }
-    .embed-container {
-      position:relative;
-      width:100%;
-      padding-bottom:56.25%;
-      overflow:hidden;
-      border-radius:8px;
-      background:#000;
-      box-shadow:0 2px 8px rgba(0,0,0,0.7);
-      margin:1rem 0;
+    .social-links a:hover {
+      background: #444;
     }
-    .embed-container iframe {
-      position:absolute;
-      top:0; left:0;
-      width:100%; height:100%;
-      border:0;
+    form input[type="email"] {
+      padding: 0.5em;
+      width: 70%;
+      max-width: 300px;
+      margin-right: 0.5em;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #222;
+      color: #eee;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Andy Roze</h1>
 
-    <div class="link-list">
-      <a href="https://www.youtube.com/AndyRoze" class="link-item" target="_blank">
-        <i class="fab fa-youtube"></i> YouTube Channel
-      </a>
-      <a href="http://songwhip.com/andyroze" class="link-item" target="_blank">
-        <i class="fas fa-music"></i> Songwhip
-      </a>
-      <a href="https://instagram.com/_andyroze_" class="link-item" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="https://www.buymeacoffee.com/andyrozemusic" class="link-item" target="_blank">
-        <i class="fas fa-coffee"></i> Buy Me a Coffee
-      </a>
-      <a href="https://open.spotify.com/artist/0I22ZgD2w7WwWUmAvrTj4Y?si=ngvEPLgIR0KjwpmE6EwN_A" class="link-item" target="_blank">
-        <i class="fab fa-spotify"></i> Spotify
-      </a>
+  <!-- Логотип -->
+  <header>
+    <img src="YOUR_LOGO_URL_HERE.png" alt="Musician Logo">
+  </header>
 
-      <!-- Встроенный плеер Spotify Playlist -->
-      <div class="embed-container">
-        <iframe 
-          src="https://open.spotify.com/embed/playlist/1MaUcIe1BAjjPDEjXgD7sl?si=63a2a61989394b32"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe>
-      </div>
+  <!-- Кнопка “Слушать релиз” -->
+  <button onclick="document.getElementById('spotify').scrollIntoView({behavior:'smooth'});">
+    Listen to Latest Release
+  </button>
 
-      <!-- Встроенное видео YouTube -->
-      <div class="embed-container">
-        <iframe 
-          src="https://www.youtube.com/embed/Nu4axVgrtgY?rel=0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+  <!-- Встроенное видео YouTube -->
+  <section id="youtube">
+    <h2>Watch the Video</h2>
+    <iframe
+      src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </section>
 
-      <!-- EDEN Quest -->
-      <a href="https://eden.andyroze.com" class="link-item" target="_blank">
-        <i class="fas fa-map-pin"></i> EDEN Quest
-      </a>
-    </div>
-  </div>
+  <!-- Встроенный плеер Spotify -->
+  <section id="spotify">
+    <h2>Listen on Spotify</h2>
+    <iframe
+      src="https://open.spotify.com/embed/album/YOUR_SPOTIFY_ALBUM_ID"
+      allow="encrypted-media">
+    </iframe>
+  </section>
+
+  <!-- Социальные ссылки -->
+  <section class="social-links">
+    <a href="YOUR_SPOTIFY_PROFILE_URL" target="_blank" aria-label="Spotify">🎵</a>
+    <a href="YOUR_YOUTUBE_CHANNEL_URL" target="_blank" aria-label="YouTube">📺</a>
+    <a href="YOUR_INSTAGRAM_URL" target="_blank" aria-label="Instagram">📸</a>
+    <a href="YOUR_SONGWHIP_URL" target="_blank" aria-label="Songwhip">🔗</a>
+  </section>
+
+  <!-- Кнопка поддержки -->
+  <button onclick="window.open('YOUR_SUPPORT_URL','_blank')">
+    Support Me
+  </button>
+
+  <!-- Форма подписки на рассылку -->
+  <section>
+    <h2>Subscribe for Updates</h2>
+    <form action="YOUR_EMAIL_SUBSCRIBE_ENDPOINT" method="post">
+      <input type="email" name="email" placeholder="Your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
 </body>
 </html>
