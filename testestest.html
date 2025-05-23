@@ -3,19 +3,106 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Andy Roze Links</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Andy Roze</title>
+  <!-- FontAwesome для иконок соцсетей -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  >
+  <style>
+    /* Сброс и фон */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body {
+      background: #000;
+      color: #eee;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    /* Контейнер */
+    .wrapper {
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+    /* Аватар */
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    p.subtitle {
+      font-size: 1rem;
+      color: #888;
+      margin-bottom: 1.5rem;
+    }
+    /* Ссылки-кнопки */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: #111;
+      color: #fff;
+      padding: 0.9rem 1.2rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      transition: background .2s, transform .1s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+    .links a:hover {
+      background: #222;
+      transform: translateY(-2px);
+    }
+    .links a i {
+      margin-right: 0.6rem;
+      font-size: 1.2rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <img src="assets/avatar.jpg" alt="Andy Roze" class="avatar">
+  <div class="wrapper">
+    <!-- Замените src на реальную обложку/аву -->
+    <img class="avatar" src="https://via.placeholder.com/120" alt="Andy Roze">
     <h1>Andy Roze</h1>
-  </header>
-  <main class="link-list">
-    <a href="https://spotify.com/andyroze" class="link-btn">Spotify</a>
-    <a href="https://youtube.com/andyroze" class="link-btn">YouTube</a>
-    <a href="https://eden.andyroze.com" class="link-btn">EDEN Quest</a>
-    <!-- ещё кнопки -->
-  </main>
+    <p class="subtitle">Music &amp; Mystery</p>
+
+    <div class="links">
+      <a href="https://open.spotify.com/artist/..." target="_blank">
+        <i class="fab fa-spotify"></i> Spotify
+      </a>
+      <a href="https://www.youtube.com/..." target="_blank">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
+      <a href="https://instagram.com/andyroze" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://twitter.com/andyroze" target="_blank">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <a href="https://facebook.com/andyroze" target="_blank">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+      <a href="https://eden.andyroze.com" target="_blank">
+        <i class="fas fa-map-pin"></i> EDEN Quest
+      </a>
+      <!-- Добавьте ещё ссылки по образцу -->
+    </div>
+  </div>
 </body>
 </html>
